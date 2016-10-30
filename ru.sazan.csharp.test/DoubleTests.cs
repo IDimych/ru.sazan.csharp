@@ -7,6 +7,21 @@ namespace ru.sazan.csharp.test
     public class DoubleTests
     {
         public double Price;
+        public double Amount;
+
+        [TestInitialize]
+        public void Setup()
+        {
+            Amount = 10;
+        }
+
+        [TestMethod]
+        public void doubles_multiplication_tests()
+         {
+            Price = 2.5;
+            double sum = Price * Amount;
+            Assert.AreEqual(25, sum);
+        }
 
         [TestMethod]
         public void default_Price_value_test()
